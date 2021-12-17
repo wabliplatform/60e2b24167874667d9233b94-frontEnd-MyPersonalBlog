@@ -3,6 +3,11 @@ let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';window
     if(subDataElements.length > i)
       {
         try { 
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'image']");
+        if(insideSubDataElement !== null){
+          insideSubDataElement.src = data[data.length -i -1].image;
+        }
+       } catch (e) { console.log(e) };try { 
         const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'date']");
         if(insideSubDataElement !== null){
           insideSubDataElement.textContent = data[data.length -i -1].date;

@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property image (base name: "image")', function() {
+      // uncomment below and update the code to test the property image
+      //var instance = new TempApi.Blog();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
