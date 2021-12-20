@@ -1,4 +1,6 @@
-let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';window.onload = () => {apiBlogApi.getAllblog((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("i1pxk").querySelectorAll( "[dataitem='true']" );
+let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';document.getElementById('ilrqo').onclick = (event) => {
+    event.preventDefault();
+    { location.href= '/createpost';}};window.onload = () => {apiBlogApi.getAllblog((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("i1pxk").querySelectorAll( "[dataitem='true']" );
   data.forEach((item,i) => {
     if(subDataElements.length > i)
       {
