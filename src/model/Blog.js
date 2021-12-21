@@ -26,10 +26,11 @@ class Blog {
      * @param title {String} 
      * @param posttext {String} 
      * @param image {String} 
+     * @param viewpost {String} 
      */
-    constructor(_date, title, posttext, image) { 
+    constructor(_date, title, posttext, image, viewpost) { 
         
-        Blog.initialize(this, _date, title, posttext, image);
+        Blog.initialize(this, _date, title, posttext, image, viewpost);
     }
 
     /**
@@ -37,11 +38,12 @@ class Blog {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, _date, title, posttext, image) { 
+    static initialize(obj, _date, title, posttext, image, viewpost) { 
         obj['date'] = _date;
         obj['title'] = title;
         obj['posttext'] = posttext;
         obj['image'] = image;
+        obj['viewpost'] = viewpost;
     }
 
     /**
@@ -69,6 +71,9 @@ class Blog {
             }
             if (data.hasOwnProperty('image')) {
                 obj['image'] = ApiClient.convertToType(data['image'], 'String');
+            }
+            if (data.hasOwnProperty('viewpost')) {
+                obj['viewpost'] = ApiClient.convertToType(data['viewpost'], 'String');
             }
         }
         return obj;
@@ -101,6 +106,11 @@ Blog.prototype['posttext'] = undefined;
  * @member {String} image
  */
 Blog.prototype['image'] = undefined;
+
+/**
+ * @member {String} viewpost
+ */
+Blog.prototype['viewpost'] = undefined;
 
 
 

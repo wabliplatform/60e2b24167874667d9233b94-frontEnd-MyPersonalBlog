@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property viewpost (base name: "viewpost")', function() {
+      // uncomment below and update the code to test the property viewpost
+      //var instance = new TempApi.Blog();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
