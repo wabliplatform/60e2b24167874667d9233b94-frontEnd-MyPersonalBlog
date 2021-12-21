@@ -72,20 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property posttext (base name: "posttext")', function() {
-      // uncomment below and update the code to test the property posttext
-      //var instance = new TempApi.Blog();
-      //expect(instance).to.be();
-    });
-
     it('should have the property image (base name: "image")', function() {
       // uncomment below and update the code to test the property image
-      //var instance = new TempApi.Blog();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property viewpost (base name: "viewpost")', function() {
-      // uncomment below and update the code to test the property viewpost
       //var instance = new TempApi.Blog();
       //expect(instance).to.be();
     });

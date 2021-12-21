@@ -7,8 +7,6 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **_date** | **String** |  | 
 **title** | **String** |  | 
-**posttext** | **String** |  | 
 **image** | **String** |  | 
-**viewpost** | **String** |  | 
 
 

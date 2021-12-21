@@ -2,7 +2,9 @@ let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';docume
     event.preventDefault();
     { location.href= '/Home';}};document.getElementById('id022').onclick = (event) => {
     event.preventDefault();
-    { location.href= '/Home';}};document.getElementById('ilrqo').onclick = (event) => {
+    { location.href= '/Home';}};document.getElementById('i24n55').onclick = (event) => {
+    event.preventDefault();
+    { location.href= '/table';}};document.getElementById('ilrqo').onclick = (event) => {
     event.preventDefault();
     { location.href= '/createpost';}};window.onload = () => {apiBlogApi.getAllblog((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("i1pxk").querySelectorAll( "[dataitem='true']" );
   data.forEach((item,i) => {
@@ -37,15 +39,5 @@ let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';docume
       }
     });
     [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].remove()})}});};document.getElementById('isa8p').onclick = (event) => {
-    event.preventDefault();
-    { location.href= '/viewpost';}};document.getElementById('itqme').onclick = (event) => {
-    event.preventDefault();
-    { location.href= '/viewpost';}};document.getElementById('ii6ud').onclick = (event) => {
-    event.preventDefault();
-    { location.href= '/viewpost';}};document.getElementById('iq8hq').onclick = (event) => {
-    event.preventDefault();
-    { location.href= '/viewpost';}};document.getElementById('i9aug').onclick = (event) => {
-    event.preventDefault();
-    { location.href= '/viewpost';}};document.getElementById('i2bd4').onclick = (event) => {
     event.preventDefault();
     { location.href= '/viewpost';}};
