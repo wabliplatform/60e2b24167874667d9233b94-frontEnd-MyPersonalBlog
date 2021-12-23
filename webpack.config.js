@@ -6,7 +6,6 @@ module.exports = {
 	'createpost' : './javascript/createpost.js',
 	'Home' : './javascript/Home.js',
 	'table' : './javascript/table.js',
-	'viewproduct' : './javascript/viewproduct.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),
