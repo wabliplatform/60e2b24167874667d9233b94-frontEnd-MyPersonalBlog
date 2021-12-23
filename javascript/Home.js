@@ -25,11 +25,6 @@ let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';docume
         if(htmlElement !== null){
           htmlElement.textContent = data[data.length -i -1].title;
         }
-       } catch (e) { console.log(e) };try { 
-        const htmlElement = subDataElements[i].querySelector("[annotationname = 'posttext']");
-        if(htmlElement !== null){
-          htmlElement.textContent = data[data.length -i -1].posttext;
-        }
        } catch (e) { console.log(e) };
         subDataElements[i].addEventListener('click',() => {{ location.href= '/viewpost/'+data[data.length -i -1]._id+'';}} )
       }
