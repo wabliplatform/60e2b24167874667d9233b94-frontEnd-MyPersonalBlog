@@ -11,24 +11,25 @@ let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';docume
     if(subDataElements.length > i)
       {
         try { 
-        const htmlElement = subDataElements[i].querySelector("[annotationname = 'image']");
-        if(htmlElement !== null){
-          htmlElement.src = data[data.length -i -1].image;
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'image']");
+        if(insideSubDataElement !== null){
+          insideSubDataElement.src = data[data.length -i -1].image;
         }
        } catch (e) { console.log(e) };try { 
-        const htmlElement = subDataElements[i].querySelector("[annotationname = 'date']");
-        if(htmlElement !== null){
-          htmlElement.textContent = data[data.length -i -1].date;
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'date']");
+        if(insideSubDataElement !== null){
+          insideSubDataElement.textContent = data[data.length -i -1].date;
         }
        } catch (e) { console.log(e) };try { 
-        const htmlElement = subDataElements[i].querySelector("[annotationname = 'title']");
-        if(htmlElement !== null){
-          htmlElement.textContent = data[data.length -i -1].title;
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'title']");
+        if(insideSubDataElement !== null){
+          insideSubDataElement.textContent = data[data.length -i -1].title;
         }
        } catch (e) { console.log(e) };
         subDataElements[i].addEventListener('click',() => {{ location.href= '/viewpost/'+data[data.length -i -1]._id+'';}} )
       }
     });
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].remove()})}});};document.getElementById('isa8p').onclick = (event) => {
+    
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};document.getElementById('isa8p').onclick = (event) => {
     event.preventDefault();
     { location.href= '/viewpost';}};

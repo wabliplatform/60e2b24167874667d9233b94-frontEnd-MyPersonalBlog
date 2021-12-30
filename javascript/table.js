@@ -7,22 +7,23 @@ let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';docume
     if(subDataElements.length > i)
       {
         try { 
-        const htmlElement = subDataElements[i].querySelector("[annotationname = 'title']");
-        if(htmlElement !== null){
-          htmlElement.textContent = data[data.length -i -1].title;
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'title']");
+        if(insideSubDataElement !== null){
+          insideSubDataElement.textContent = data[data.length -i -1].title;
         }
        } catch (e) { console.log(e) };try { 
-        const htmlElement = subDataElements[i].querySelector("[annotationname = 'date']");
-        if(htmlElement !== null){
-          htmlElement.textContent = data[data.length -i -1].date;
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'date']");
+        if(insideSubDataElement !== null){
+          insideSubDataElement.textContent = data[data.length -i -1].date;
         }
        } catch (e) { console.log(e) };try { 
-        const htmlElement = subDataElements[i].querySelector("[annotationname = 'image']");
-        if(htmlElement !== null){
-          htmlElement.textContent = data[data.length -i -1].image;
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'image']");
+        if(insideSubDataElement !== null){
+          insideSubDataElement.textContent = data[data.length -i -1].image;
         }
        } catch (e) { console.log(e) };
         
       }
     });
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].remove()})}});};
+    
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};
