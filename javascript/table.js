@@ -11,15 +11,24 @@ let apiBlogApi = new TempApi.BlogApi();import TempApi from '../src/index';docume
         if(insideSubDataElement !== null){
           insideSubDataElement.textContent = data[data.length -i -1].title;
         }
+        else if(subDataElements[i].getAttribute('annotationname') === 'title'){
+          subDataElements[i].textContent = data[data.length -i -1].title;
+        }
        } catch (e) { console.log(e) };try { 
         const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'date']");
         if(insideSubDataElement !== null){
           insideSubDataElement.textContent = data[data.length -i -1].date;
         }
+        else if(subDataElements[i].getAttribute('annotationname') === 'date'){
+          subDataElements[i].textContent = data[data.length -i -1].date;
+        }
        } catch (e) { console.log(e) };try { 
         const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'image']");
         if(insideSubDataElement !== null){
           insideSubDataElement.textContent = data[data.length -i -1].image;
+        }
+        else if(subDataElements[i].getAttribute('annotationname') === 'image'){
+          subDataElements[i].textContent = data[data.length -i -1].image;
         }
        } catch (e) { console.log(e) };
         
